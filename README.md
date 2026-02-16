@@ -277,7 +277,7 @@ HW8_3. 第四章习题, 第14(1)题, n<=30.
     <img width="779" height="555" alt="HW8_3_3" src="https://github.com/user-attachments/assets/64364c35-3a6a-407a-a709-65ad005e5bda" />
     <img width="2899" height="1597" alt="HW8_3_4" src="https://github.com/user-attachments/assets/1d39f9db-f6c8-46cb-98c2-6a2cf5da54fc" />
 
-Homework 9\n
+Homework 9
 HW9_1. 统计一段输入文本(长度<1000, 仅有一个换行符)中单词的数目, 输出单词列表(每行5个单词, 按照最长单词的长度+1对齐)以及其中最长的单词. 注意: 简便起见, 单词仅由连续的英文字母组成(长度<20); 出现多个最长单词时，只输出第一个. 
 <img width="2936" height="682" alt="HW9_1_1" src="https://github.com/user-attachments/assets/1c1cf7b6-98d3-498a-bef5-c9a6b1fa5709" />
 <img width="3788" height="1688" alt="HW9_1_2" src="https://github.com/user-attachments/assets/af327e28-47eb-42a0-b1a3-642d48edddd1" />
@@ -291,4 +291,311 @@ HW9_2. 对于给定的n(n<=100)，借助数组结构，计算输出n!的值。
 ![HW9_2_2](https://github.com/user-attachments/assets/fae9b2b5-e78f-45e3-b35f-e1b1638d5947)
 ![HW9_2_3](https://github.com/user-attachments/assets/0f0bc769-b95d-41cb-b081-ef7c5a52f884)
 
+HW9_3. 参照课本第5章[例5.19], 分别编写将正整数正序输出和逆序输出的递归函数及测试程序. 要求: 实现2个版本(HW9_3_1.c, HW9_3_2.c). 一个版本(HW9_3_2.c)输出递归层次和局部变量, 一个版本(HW9_3_1.c)不输出. 
+
+![HW9_3_1](https://github.com/user-attachments/assets/b5a90cc6-63f7-4c42-a319-40042e8001b8)
+<img width="247" height="507" alt="HW9_3_2" src="https://github.com/user-attachments/assets/ab6049e6-609c-4c0f-8991-3055afd198a8" />
+
+Homework 10
+
+HW10_1. 随机产生一个包含100个元素以内的整型数组, 数组元素为100以内的非负整数, 求所有元素的最大值、最小值和平均值(小数点后保留一位). 要求: 利用指针读写数组元素, 即, 不得使用"数组名[下标]"访问数组元素.
+<img width="319" height="100" alt="HW10_1_1" src="https://github.com/user-attachments/assets/fbdf9795-34f9-49a9-9392-fe4b7ab50478" />
+<img width="367" height="207" alt="HW10_1_2" src="https://github.com/user-attachments/assets/cbe831b1-007c-4331-b49f-a2382441c5f0" />
+
+
+HW10_2. 第6章习题, 第17(6)题.用指针描述以下运算：整理字符串，将字符串中前导和后随的空白符删除，字符串中间连续的多个空白符只保留一个，去掉多余的空白符。要求: 用指向字符的指针实现. 补充说明: 1. 字符串仅由英文字母、数字符和空白符组成, 且长度<100; 2. 字符串中间的连续多个空白符仅保留一个空格符; 3. 不能用工作数组.
+
+测试字符串: 1. 空字符串; 2. 仅由空白符构成的字符串, 如: "\t_\t_"(下划线代表空格符); 3. 不包含多余空白符的字符串, 如: "To C or not to C"; 4. 包含多余空白符的字符串, 如: "\t__To\t\tC__or_not___to_C\t\t__"
+
+算法只需遍历字符串一次, 且每个非空白字符仅复制一次. 请参考课件P34-35示例.
+<img width="2053" height="582" alt="HW10_2_1" src="https://github.com/user-attachments/assets/51c5fb45-d440-4f75-811d-fd31cb15c547" />
+<img width="1836" height="560" alt="HW10_2_2" src="https://github.com/user-attachments/assets/3a252039-01b0-4230-84e8-8283cf7d004f" />
+<img width="1869" height="573" alt="HW10_2_3" src="https://github.com/user-attachments/assets/f95df899-058d-47d8-bfe7-1758949b89bb" />
+<img width="1789" height="554" alt="HW10_2_4" src="https://github.com/user-attachments/assets/47ade1c7-7837-4f16-8396-a16834bcd372" />
+
+
+HW10_3. 若正整数n可分割为2个数(不一定是在中间位分割), 而这2个数之和的平方恰好等于n, 那么n就是K数. 例如: 88209可分割为88和209, (88+209)2=88209, 则88209就是一个K数.
+
+编写程序, 由用户输入一个正整数(<=1000000), 程序输出小于该正整数的全部K数. 要求: 将判断一个数是否为k数的功能定义为函数, 如果是, 则返回(效果上)构成K数的两个子数. 主函数的框架如下所示:
+
+int main()
+{
+    ......
+
+    对每个候选数i
+        如果i是k数
+            输出算式
+    ......
+
+    return 0;
+}
+<img width="280" height="134" alt="HW10_3_1" src="https://github.com/user-attachments/assets/41c50a43-7c6e-4671-bea6-4e0e9963f61a" />
+<img width="298" height="205" alt="HW10_3_2" src="https://github.com/user-attachments/assets/0e1da03e-5f1c-4c9e-ab42-917f36f154f1" />
+
+Homework 11
+
+HW11_1. 第4章习题, 第12题. 编写将数组的前n个元素中，前端的m个元素和随后的n - m个元素互换的程序。要求程序不另用其他工作数组。
+
+算法思想: step 1. 将数组的前m个元素逆序; step 2. 将数组的后n-m个元素逆序; step 3. 将n个元素逆序.
+
+例如: 数组的前n个元素为: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, m为3, 则
+
+  step 1) 3, 2, 1, 4, 5, 6, 7, 8, 9, 10
+
+  step 2) 3, 2, 1, 10, 9, 8, 7, 6, 5, 4
+
+  step 3) 4, 5, 6, 7, 8, 9, 10, 1, 2, 3
+
+定义函数, 实现将数组当中的一段元素逆序的功能. 在主函数中, 随机产生1~n(n < 20)整数序列, 再随机产生m(m < n), 3次调用该功能函数, 完成整数序列的循环左移.
+<img width="2322" height="311" alt="HW11_1_1" src="https://github.com/user-attachments/assets/7f0c066b-4172-492a-8534-5d9da2d30234" />
+<img width="1705" height="330" alt="HW11_1_2" src="https://github.com/user-attachments/assets/28e49154-4e31-4673-a42e-a9f2239160c5" />
+<img width="1706" height="330" alt="HW11_1_3" src="https://github.com/user-attachments/assets/14eced64-cb2b-4950-8d87-9a652ee52600" />
+
+
+HW11_2. 在HW6_2的基础上, 实现2~36进制数的转换(10~35用A~Z表示). 程序运行时, 任意输入5个进制基数, 输出对齐排列的转换结果. 要求定义以下函数, 
+
+convert(...): 将一个十进制整数转换为n进制整数;
+printResult(...): 对齐输出一个n进制整数;
+还可以将HW6_2中的产生若干随机数存于数组、输出存于数组中的随机数、对数组排序等功能分别定义为函数......
+假设数组a保存排序之后的n个随机整数, 数组base保存包括10在内的6个进制基数, WIDTH为对齐输出宽度(本题设置为12), 则转换和对齐输出循环如下所示:
+
+    for (i = 0; i != n; i++) {
+        printf("%-*d", WIDTH, a[i]);  //WIDTH: 宏名
+        for (j = 1; j != 6; ++j) {
+            convert(a[i], base[j], result, &len);  //result: 保存转换结果的数组; len: 转换之后的长度
+            printResult(result, len);  //对齐输出转换结果
+        }
+        putchar('\n');
+    }
+
+Tip. 为了方便取用各进制数所对应的数位, 将所有可用数位保存在一个字符数组中:
+
+char digits[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+<img width="2099" height="1171" alt="HW11_2_1" src="https://github.com/user-attachments/assets/10d5915f-e3ab-48cd-ac3c-c0a7b9721c64" />
+<img width="2199" height="1333" alt="HW11_2_2" src="https://github.com/user-attachments/assets/6c88462d-bf45-44d0-946a-5a8128285f8e" />
+<img width="2054" height="928" alt="HW11_2_3" src="https://github.com/user-attachments/assets/e552eebe-348d-4e16-b81e-92fc35221b96" />
+
+HW11_3. 第6章习题, 第10题.有若干个学生，每人考四门课程，设用二维数组存储学生的成绩，二维数组的一行对应一个学生的成绩，每行的第一个数是学生的学号。试用此数据结构为基础，编写两个函数：一个是已知成绩表和学号，返回该生成绩表的函数；另一个是已知某个学生表，输出学生学号和成绩的函数。要求两个函数采用指针编写。
+
+简单起见, 给定成绩表如下(程序具有处理相同结构其它数据的能力):
+
+int list[][5] = {{201001, 75, 85, 77, 59}, {201002, 57, 78, 73, 66}, {201003, 89, 86, 70, 90}, {201004, 47, 70, 82, 73}, {201005, 72, 87, 88, 54}, {201006, 90, 96, 99, 99}, {201007, 81, 97, 99, 67}, {201008, 43, 98, 96, 79}, {201009, 67, 72, 73, 40}, {201010, 77, 70, 82, 65}, {201011, 77, 72, 73, 80}, {201012, 47, 70, 82, 73}, {201013, 77, 82, 83, 50}, {201014, 97, 90, 92, 95}, {201015, 87, 92, 93, 60}, {201016, 47, 90, 92, 73}};
+<img width="1338" height="1486" alt="HW11_3_1" src="https://github.com/user-attachments/assets/c63c4a63-f8be-4aff-8aa1-73944cea20ab" />
+<img width="1293" height="1481" alt="HW11_3_2" src="https://github.com/user-attachments/assets/a5709f38-7166-431b-ba4a-576c7e8328e2" />
+
+HW11_4. 随机生成包含10个整数[0, 100)的数组a[], 按元素值从小到大的顺序编号存于数组b[], 即, a[i]的编号存于b[i]. 值相同的元素编号也相同, 如: 假设元素为{1, 0, 3, 2, 1}, 则对应的编号为{2, 1, 5, 4, 2}. 要求用指针数组实现, 并且除了指针数组以外不得使用其它工作数组. 
+
+给定程序框架HW11_4_starter.（如下）, 实现其中的功能函数.
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define N 10
+
+int main()
+{
+	int a[N], b[N], * pa[N];
+
+	initArray(a, N);	
+	printf("Data:\t");
+	outputArray(a, N);	
+
+	initPointerArray(a, N, pa);	
+	sortByPointer(pa, N);		
+	rankArray(b, a, pa, N);		
+
+	printf("No:\t");
+	outputArray(b, N);	
+	return 0;
+}
+<img width="1719" height="183" alt="HW11_4_1" src="https://github.com/user-attachments/assets/cd527a08-ee76-4466-aace-9fb9bcad58ed" />
+<img width="1690" height="174" alt="HW11_4_2" src="https://github.com/user-attachments/assets/af4de75c-1cd9-4fe5-8d00-db186afb2386" />
+
+Homework 12
+
+HW12_1. 求三个字符串(长度<100)的最长公共子串并输出(用一对圆括号界定). 如果有多个最长公共子串, 输出找到的第一个.
+
+Tip. 教材的附录E字符串库函数中, char* strstr(char *s1, char *s2)用来在s1中寻找s2的第一次出现, 找到则返回s1中出现s2的首字符指针, 未找到返回NULL.
+<img width="1162" height="405" alt="HW12_1_1" src="https://github.com/user-attachments/assets/4f0c76eb-b128-49a3-a7fa-80e8366a8dc6" />
+<img width="1146" height="407" alt="HW12_1_2" src="https://github.com/user-attachments/assets/ac624174-798a-4bd1-a507-a2aaf42d4c1b" />
+<img width="1423" height="405" alt="HW12_1_3" src="https://github.com/user-attachments/assets/9d8367c6-a116-435e-86de-775ffe75be0f" />
+
+HW12_2. 已知一个班级的成绩记录如下:
+Moo 100 100 100 100 100 100 100 100
+Moore 75 85 77 59 0 85 75 89
+Norman 57 78 73 66 78 70 88 89
+Olson 89 86 70 90 55 73 80 84
+Peerson 47 70 82 73 50 87 73 71
+Russel 72 87 88 54 55 82 69 87
+Thomas 90 96 99 99 100 81 97 97
+Vaughn 81 97 99 67 40 90 70 96
+Westerly 43 98 96 79 100 82 97 96
+Baker 67 72 73 40 0 78 55 70
+Davis 77 70 82 65 70 77 83 81
+Edwards 77 72 73 80 90 93 75 90
+Franklin 47 70 82 73 50 87 73 71
+Jones 77 82 83 50 10 88 65 80
+Harris 97 90 92 95 100 87 93 91
+Smith 87 92 93 60 0 98 75 90
+Carpenter 47 90 92 73 100 87 93 91
+每条记录的信息依次是: 名字  期中成绩  期末成绩  平时作业成绩. 约定: 名字长度>1, 每行记录的各个数据之间以空格分隔、以换行结束.
+
+求每位学生的总评成绩, 并按照名字的字典顺序输出结果. 要求:
+
+1) 学生记录定义为结构, 结构内使用数组保存学生的每次作业成绩(最大作业次数为16次);
+
+2) 定义输入函数: 以上述班级的成绩记录为输入(拷贝-粘贴, 以空行结束输入), 把数据保存到结构数组中. 要求输入函数能处理相同结构的其它输入数据: 班级人数以及作业次数均与样例不同 (班级人数上限为100);
+
+3) 定义排序函数: 排序利用结构指针, 避免交换结构;
+
+4) 按照以下公式计算每位学生的总评成绩(定义为函数):
+      总评成绩=0.2×期中成绩+0.4×期末成绩+0.4×平时成绩
+      平时成绩=作业成绩之和÷作业次数
+
+5) 定义2个输出函数: i) 输出所有学生记录函数, ii) 输出总评成绩函数. 要求输出时, 各列左对齐, 且各列之间仅间隔一个空格位置. 其中, 名字列的输出宽度为最长名字长度(由程序计算，不能靠人工数数), 成绩列的输出宽度为最高分的位数.
+<img width="295" height="513" alt="HW12_2_1" src="https://github.com/user-attachments/assets/46619b3f-981b-4d04-912a-a4e39fb6d333" />
+<img width="317" height="512" alt="HW12_2_2" src="https://github.com/user-attachments/assets/527731f1-61c9-44ba-8f16-57c17809fee0" />
+
+HW12_3. 洗牌程序. 用一个结构数组保存52张牌, 每张牌包含花色和面值. 首先按照花色和面值初始化结构数组(正如我们买到的新牌), 然后利用随机数进行洗牌. 输出洗牌结果. 要求如下:
+
+1) 保存花色的指针数组,
+char *suits[] = {"Spades", "Hearts", "Diammonds", "Clubs"};
+保存面值的指针数组,
+char *faces[] = {"Ace", "Deuce", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
+
+2）定义初始化纸牌的函数initCards(), 按照花色和面值初始化纸牌结构数组.
+
+3）定义输出纸牌的函数outputCards(), 输出52张纸牌的花色和面值(按照示例对齐输出).
+
+4）定义洗牌函数shuffle(), 洗牌算法: 循环考察结构数组中的每个元素, 用随机数函数生成一个52以内的随机数, 将当前考察元素与下标为随机数的元素交换.
+
+5) 将常量数组、类型定义、函数声明等非执行代码保存于头文件"HW12_3_学号.h"中.
+![HW12_3](https://github.com/user-attachments/assets/045d85a5-4c62-49de-9aec-c637b7973e99)
+
+HW12_4. 编写程序, 输入人数和年龄, 统计各年龄段人数. 要求:
+
+1) 根据用户输入的人数, 利用malloc/calloc函数创建动态数组, 用于保存年龄;
+
+2) 简单起见, 年龄随机生成;
+
+3) 年龄粗略分为5段: [0,12], (12, 19], (19, 35], (35, 65], >65.
+4) <img width="1498" height="970" alt="HW12_4" src="https://github.com/user-attachments/assets/bb7a2968-3a29-4f1d-a546-a28c217459f0" />
+
+Homework 13
+HW13_1. 第7章习题, 第8题. 编写3个链表复制函数。第一个是复制出相同链接顺序的链表；第2个是复制出链接顺序相反的链表；第3个复制出有序链表。除了实现三个链表复制函数(有序指从小到大)以外, 还要求实现如下三个函数:
+1) 创建包含10个整数表元(表元值随机生成)的无序整数链表函数initLink(...);
+2) 输出链表函数outputLink(...);
+3) 释放链表所占空间函数freeLink(...).主函数给定
+
+int main()
+{
+	struct intNode* h[4];
+	int i;
+
+	h[0] = initLink();
+	h[1] = copy(h[0]);
+	h[2] = copyReversed(h[0]);
+	h[3] = copySorted(h[0]);
+
+	char* prompt[] = { "Random list", "List copy", "Reversed list copy", "Sorted list copy" };
+	for (i = 0; i < 4; i++) {
+		printf("%s: \n", prompt[i]);
+		outputLink(h[i]);
+	}
+
+	for (i = 0; i < 4; i++)
+		freeLink(h[i]);
+
+	return 0;
+}
+<img width="1465" height="603" alt="HW13_1" src="https://github.com/user-attachments/assets/35d11bb3-3e67-4010-b78d-5b943a71027a" />
+
+HW13_2. 从无序整数链表中找出最小表元, 并删除其首次出现. 要求实现四个函数, 前三个函数与上题相同, 第四个函数为查找并删除最小表元函数delMin(...).
+<img width="1444" height="297" alt="HW13_2_1" src="https://github.com/user-attachments/assets/a91fb7c6-1eec-4d2c-b235-2b02710d8b79" />
+<img width="1455" height="322" alt="HW13_2_2" src="https://github.com/user-attachments/assets/113138be-1218-4f91-9599-b882de2d8516" />
+
+HW13_3. 用链表实现两个多项式相加. 具体分析参考课件. 要求实现四个函数:
+1) 建立有序链表函数: 存储多项式的幂次和系数;
+2) 两个链表的对应项求和函数;
+3) 链表输出函数;
+4) 释放链表所占据的内存单元函数.
+<img width="2308" height="1425" alt="HW13_3_1" src="https://github.com/user-attachments/assets/7748bba1-6879-46be-9adb-a0b64fa11f89" />
+<img width="2267" height="1131" alt="HW13_3_2" src="https://github.com/user-attachments/assets/40c0bc0c-9ff4-41c7-a8e5-ebd186c894ac" />
+
+HW14_1. 第7章习题, 第10题. 令整数链表的表元包含两个指针成分，一个用于指出从小到大的链接顺序；另一个用于输入的先后顺序。用带辅助表元的链表实现. 随机产生[10,20)个[0, 100)的整数, 构成有两个指针成员的整数链表, 分别按输入顺序和从小到大的顺序输出. 
+<img width="1284" height="463" alt="HW14_1_1" src="https://github.com/user-attachments/assets/a6f619a4-cb77-444e-b83b-643db9b47b88" />
+<img width="1970" height="473" alt="HW14_1_2" src="https://github.com/user-attachments/assets/cb536985-2f00-4306-8503-8c7762117fb6" />
+
+HW14_2. 文本加密和解密.
+
+加密: 已知原文和密钥key, 对原文每key位提取其字符, 构成密文; 到达末尾则回到头部; 已经提取的不再提取. 如: "abcde", key=3, 则密文为: "caebd".
+
+解密: 已知密文和key, 获取原文. 如: 密文为"caebd", key=3, 则解密之后的原文为: "abcde". 
+
+给定部分源程序HW14_2.c, 要求至少定义并实现2个函数:
+
+创建环形链表函数makeLoop(...);
+加密/解密函数process(...).
+Tip. 链表中保存的不是原文或密文, 而是原文每个字符的下标. 例如: 原文s是"abcde", 密钥是3 
+
+加密时, 链表中保存0, 1, 2, 3, 4,  第一轮循环: 下标为2的字符'c'取出保存于密文, 2从链表中删除; 第二轮循环: 下标为0的字符'a'取出保存于密文, 0从链表中删除; ......
+解密时, 密文字符串为"caebd", 假设用decipher[]保存解密字符串。链表中保存的仍然是0, 1, 2, 3, 4, 第一轮循环: 字符'c'保存到decipher[2], 2从链表中删除; 第二轮循环: 字符'a'保存到decipher[0], 0从链表中删除; ......
+可以看到, 加密和解密的过程实际上是一样的, 只不过是保存的对象不同.源程序如下：
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define N 1000
+#define ENCRYPT 1  
+#define DECRYPT 2  
+
+typedef struct node
+{
+	int i;
+	struct node* next;
+}Node;
+
+
+int main()
+{
+	int key;
+	char original[N], cipher[N], decipher[N];
+
+	printf("Enter some text (length < %d):\n", N);
+	gets(original);
+	printf("Enter the key: ");
+	scanf("%d", &key);
+
+	process(original, key, cipher, ENCRYPT);  
+	printf("The cipher:\n%s\n", cipher);
+	process(cipher, key, decipher, DECRYPT);  
+	printf("The decipher:\n%s\n", decipher);
+
+	return 0;
+}
+<img width="374" height="137" alt="HW14_2_1" src="https://github.com/user-attachments/assets/b9ce48c3-35ad-4c17-921e-9f379ba3ddbe" />
+<img width="946" height="192" alt="HW14_2_2" src="https://github.com/user-attachments/assets/e83e5cfb-0421-4576-9965-816c64481fbd" />
+<img width="296" height="133" alt="HW14_2_3" src="https://github.com/user-attachments/assets/bd227b4d-6b17-401e-ae59-ed44b1117026" />
+
+HW14_3. 修改HW12_2.c, 改成从文件students.csv 中读取学生姓名和平时成绩并显示在屏幕上, 计算总评成绩并按姓名排序后输出到屏幕上, 同时还要将计算结果格式化输出到文件grades.csv中.  要求:
+I. 修改输入函数, 改成从文件中读入所有学生记录;
+II. 修改输出总评成绩函数, 增加将计算结果写入文件的功能.[students (2).csv](https://github.com/user-attachments/files/25331101/students.2.csv)
+Moo,100,100,100,100,100,100,100,100
+Moore,75,85,77,59,0,85,75,89
+Norman,57,78,73,66,78,70,88,89
+Olson,89,86,70,90,55,73,80,84
+Peerson,47,70,82,73,50,87,73,71
+Russel,72,87,88,54,55,82,69,87
+Thomas,90,96,99,99,100,81,97,97
+Vaughn,81,97,99,67,40,90,70,96
+Westerly,43,98,96,79,100,82,97,96
+Baker,67,72,73,40,0,78,55,70
+Davis,77,70,82,65,70,77,83,81
+Edwards,77,72,73,80,90,93,75,90
+Franklin,47,70,82,73,50,87,73,71
+Jones,77,82,83,50,10,88,65,80
+Harris,97,90,92,95,100,87,93,91
+Smith,87,92,93,60,0,98,75,90
+Carpenter,47,90,92,73,100,87,93,91
+<img width="960" height="540" alt="HW14_3" src="https://github.com/user-attachments/assets/1245fa29-308b-4bc8-b6a5-80e02321ebcd" />
 
