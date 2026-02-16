@@ -256,9 +256,11 @@ HW8_2. 第五章习题, 第8题.试按下面的定义编写求两整数最大公
                     gcd(a, b - a)   ,a < b
         要求函数gcd()能输出形参值a和b,以便能观察函数gcd()的递归计算过程。
         要求: 递归层数也要输出, 用静态局部变量记录. 
-        <img width="448" height="124" alt="HW8_2_1" src="https://github.com/user-attachments/assets/537dd694-ffdb-4639-a9ba-5fadb150c4f2" />
-        <img width="452" height="523" alt="HW8_2_2" src="https://github.com/user-attachments/assets/541b2b09-ba1f-4953-96a7-445caff8d358" />
-        <img width="502" height="395" alt="HW8_2_3" src="https://github.com/user-attachments/assets/d418d84c-893f-4d75-8d8a-29e6df0f7ee0" />
+
+        
+<img width="448" height="124" alt="HW8_2_1" src="https://github.com/user-attachments/assets/537dd694-ffdb-4639-a9ba-5fadb150c4f2" />
+<img width="452" height="523" alt="HW8_2_2" src="https://github.com/user-attachments/assets/541b2b09-ba1f-4953-96a7-445caff8d358" />
+<img width="502" height="395" alt="HW8_2_3" src="https://github.com/user-attachments/assets/d418d84c-893f-4d75-8d8a-29e6df0f7ee0" />
 
 HW8_3. 第四章习题, 第14(1)题, n<=30.  
 分别生成如下示例所示，有自然数1-N^2组成的N阶方阵，并输出：
@@ -277,5 +279,16 @@ HW8_3. 第四章习题, 第14(1)题, n<=30.
 
 Homework 9\n
 HW9_1. 统计一段输入文本(长度<1000, 仅有一个换行符)中单词的数目, 输出单词列表(每行5个单词, 按照最长单词的长度+1对齐)以及其中最长的单词. 注意: 简便起见, 单词仅由连续的英文字母组成(长度<20); 出现多个最长单词时，只输出第一个. 
+<img width="2936" height="682" alt="HW9_1_1" src="https://github.com/user-attachments/assets/1c1cf7b6-98d3-498a-bef5-c9a6b1fa5709" />
+<img width="3788" height="1688" alt="HW9_1_2" src="https://github.com/user-attachments/assets/af327e28-47eb-42a0-b1a3-642d48edddd1" />
+<img width="1002" height="608" alt="HW9_1_3" src="https://github.com/user-attachments/assets/f3a4d24a-b51d-422e-8e32-0ebae0dedadd" />
+<img width="991" height="554" alt="HW9_1_4" src="https://github.com/user-attachments/assets/099b00e4-07e8-4f6a-b52e-5efb7975067b" />
+第二个示例的输入文本来自https://www.fudan.edu.cn/en/2024/1023/c344a142672/page.htm
+
+HW9_2. 对于给定的n(n<=100)，借助数组结构，计算输出n!的值。
+[提示] 由于n!会超出计算机能直接表示的整数范围，所以程序使用一维数组存储大整数: 数组的每个元素存储大整数的一位数字，从低位到高位依次从下标为1的元素开始顺序存放，并规定下标为0的元素存储大整数的位数。例如, 5!=120, 在数组中的存储形式为：3 0 2 1.
+![HW9_2_1](https://github.com/user-attachments/assets/a2c65002-7f1d-47ae-8ec4-2b419758b049)
+![HW9_2_2](https://github.com/user-attachments/assets/fae9b2b5-e78f-45e3-b35f-e1b1638d5947)
+![HW9_2_3](https://github.com/user-attachments/assets/0f0bc769-b95d-41cb-b081-ef7c5a52f884)
 
 
