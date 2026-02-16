@@ -195,4 +195,87 @@ k=1+rand()号9;
 
 2) 随机生成乘法的两个因数. 注意: 两位数乘法至少有一个乘数为两位数.
 
-3) 程序对正确答案和错误答案的响应字符串(参见课本)保存到二维字符数组中, 根据答案正确/错误随机选择响应字符串并输出. 
+3) 程序对正确答案和错误答案的响应字符串(参见课本)保存到二维字符数组中, 根据答案正确/错误随机选择响应字符串并输出.
+
+ 输出示例如下：1. User selects option 1 (One-digit multiplication)
+   · Program: Pls calculate: 1*7=
+   · User: 7
+   · Program: Very good!
+   · Program displays menu again.
+2. User selects option 1
+   · Program: Pls calculate: 5*9=
+   · User: 45
+   · Program: Excellent!
+   · Menu.
+3. User selects option 1
+   · Program: Pls calculate: 3*6=
+   · User: 18
+   · Program: Keep up the good work!
+   · Menu.
+4. User selects option 2 (Two-digit multiplication)
+   · Program: Pls calculate: 81*61=
+   · User: 4801
+   · Program: Wrong. Try once more.
+   · User: 4941
+   · (No explicit feedback shown; menu appears.)
+5. User selects option 2
+   · Program: Pls calculate: 31*6=
+   · User: 186
+   · Program: Excellent!
+   · Menu.
+6. User selects option 2
+   · Program: Pls calculate: 13*61=
+   · User: 7813
+   · Program: No. Keep trying.
+   · User: 793
+   · (Menu appears.)
+7. User selects option 2
+   · Program: Pls calculate: 20*51=
+   · User: 1020
+   · Program: Very good!
+   · Menu.
+8. User selects option 2
+   · Program: Pls calculate: 62*89=
+   · User: 4818
+   · Program: No. Keep trying.
+   · User: 5518
+   · (Menu appears.)
+9. User selects option 2
+   · Program: Pls calculate: 43*89=
+   · User: 3227
+   · Program: No. Please try again.
+   · User: 3827
+   · Menu.
+10. User selects option 3 (Exit)
+    · Program: Bye~
+
+HW8_2. 第五章习题, 第8题.试按下面的定义编写求两整数最大公约数的递归函数gcd():
+
+        gcd(a,b) = a                ,a = b
+                    gcd(a - b, b)   ,a > b
+                    gcd(a, b - a)   ,a < b
+        要求函数gcd()能输出形参值a和b,以便能观察函数gcd()的递归计算过程。
+        要求: 递归层数也要输出, 用静态局部变量记录. 
+        <img width="448" height="124" alt="HW8_2_1" src="https://github.com/user-attachments/assets/537dd694-ffdb-4639-a9ba-5fadb150c4f2" />
+        <img width="452" height="523" alt="HW8_2_2" src="https://github.com/user-attachments/assets/541b2b09-ba1f-4953-96a7-445caff8d358" />
+        <img width="502" height="395" alt="HW8_2_3" src="https://github.com/user-attachments/assets/d418d84c-893f-4d75-8d8a-29e6df0f7ee0" />
+
+HW8_3. 第四章习题, 第14(1)题, n<=30.  
+分别生成如下示例所示，有自然数1-N^2组成的N阶方阵，并输出：
+    1    3    4    10
+
+    2    5    9    11
+
+    6    8    12    15        
+
+    7    13    14    16
+
+    <img width="427" height="243" alt="HW8_3_1" src="https://github.com/user-attachments/assets/2432e4fc-4eba-49e2-a859-bcd517e48f9e" />
+    <img width="449" height="333" alt="HW8_3_2" src="https://github.com/user-attachments/assets/7f1c1a3e-3975-4e2c-8e40-1315549a4c00" />
+    <img width="779" height="555" alt="HW8_3_3" src="https://github.com/user-attachments/assets/64364c35-3a6a-407a-a709-65ad005e5bda" />
+    <img width="2899" height="1597" alt="HW8_3_4" src="https://github.com/user-attachments/assets/1d39f9db-f6c8-46cb-98c2-6a2cf5da54fc" />
+
+Homework 9\n
+HW9_1. 统计一段输入文本(长度<1000, 仅有一个换行符)中单词的数目, 输出单词列表(每行5个单词, 按照最长单词的长度+1对齐)以及其中最长的单词. 注意: 简便起见, 单词仅由连续的英文字母组成(长度<20); 出现多个最长单词时，只输出第一个. 
+
+
